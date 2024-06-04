@@ -1,0 +1,59 @@
+.timer {
+  text-align: center;
+}
+
+
+
+.controls button {
+  margin: 5px;
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+  color:#45a049
+}
+
+.timer {
+  margin: 0px;
+  border-radius:40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color:#02f2c6c6;
+}
+
+body{
+background-color:#3498db;
+
+}
+button{
+  background-color: #00010627; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.styled-button:hover {
+  background-color: #001401;
+}
+
+
+.input {
+  margin-top: 10px;
+  border-radius: 10px;
+  border-style:inherit;
+}
+input{
+  background-color:rgb(130, 130, 177);
+  font-size: 35px;
+}
+
+#display {
+  font-size: 200px;
+}
