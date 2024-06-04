@@ -1,5 +1,5 @@
-let timeLeft = 0;
-let timerId;
+let a = 0;
+let b;
 
 function formatTime(seconds) {
   const hours = Math.floor(seconds / 3600);
@@ -9,34 +9,34 @@ function formatTime(seconds) {
 }
 
 function startTimer() {
-  if (timeLeft > 0 && !timerId) {
-    timerId = setInterval(() => {
-      timeLeft--;
-      document.getElementById('display').innerText = formatTime(timeLeft);
-      if (timeLeft === 0) {
-        clearInterval(timerId);
-        timerId = null;
+  if (a > 0 && !b) {
+    b = setInterval(() => {
+      a--;
+      document.getElementById('display').innerText = formatTime(a);
+      if (a === 0) {
+        clearInterval(b);
+        b = null;
       }
     }, 1000);
   }
 }
 
 function pauseTimer() {
-  clearInterval(timerId);
-  timerId = null;
+  clearInterval(b);
+  b = null;
 }
 
 function resetTimer() {
-  clearInterval(timerId);
-  timerId = null;
-  timeLeft = 0;
-  document.getElementById('display').innerText = formatTime(timeLeft);
+  clearInterval(b);
+  b = null;
+  a = 0;
+  document.getElementById('display').innerText = formatTime(a);
 }
 
 function setTime() {
-  const inputTime = parseInt(document.getElementById('inputTime').value);
-  if (!isNaN(inputTime)) {
-    timeLeft = inputTime;
-    document.getElementById('display').innerText = formatTime(timeLeft);
+  const input = parseInt(document.getElementById('inputTime').value);
+  if (!isNaN(input)) {
+    a = input;
+    document.getElementById('display').innerText = formatTime(a);
   }
 }
